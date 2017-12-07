@@ -1,5 +1,13 @@
 {
+  "scripts": {
+    "build": "webpack",
+    "build:watch": "yarn build --watch",
+    "build:watch:dev": "yarn build:watch --env.env=dev",
+    "build:watch:prod": "yarn build:watch --env.env=prod"
+  },
   "devDependencies": {
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7",
+    "webpack-merge": "^4.1.1"
   }
 }
