@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Elias Ylänen",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack"
+  },
   "devDependencies": {
     "webpack": "^3.10.0"
   }
