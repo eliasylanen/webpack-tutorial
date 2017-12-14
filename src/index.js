@@ -1,6 +1,6 @@
 import createCard from './card';
+import './logo.png';
+import './logo_small.png';
+import './index.css';
 
-createCard(
-  "I'm learning Webpack essentials",
-  'This course is made by Seam Larkin'
-);
+createCard("I'm learning Webpack", 'TEst');
