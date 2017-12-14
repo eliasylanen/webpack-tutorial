@@ -2,17 +2,22 @@ const commonConfig = require('./build-utils/webpack.common');
 const webpackMerge = require('webpack-merge');
 
 const addons = addonArgs => {
-  const addons = [].concat.apply([], addonArgs).filter(Boolean);
-
+  const addons = [].concat(...[addonArgs]).filter(Boolean);
   return addons.map(addonName =>
     require(`./build-utils/addons/webpack.${addonName}`)
   );
 };
 
 module.exports = env => {
-  console.log(env);
+  if (!env) throw new Error('No --env flag');
 
   const envConfig = require(`./build-utils/webpack.${env.env}`);
+  const mergedConfig = webpackMerge(
+    commonConfig,
+    envConfig,
+    ...addons(env.addons)
+  );
 
-  return webpackMerge(commonConfig, envConfig);
+  console.log(mergedConfig);
+  return mergedConfig;
 };
