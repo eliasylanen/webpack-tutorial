@@ -4,14 +4,23 @@
     "start": "webpack-dashboard -- nodemon --watch webpack.config.js --exec 'webpack-dev-server --hot --env.target=development'"
   },
   "devDependencies": {
+    "autoprefixer": "^7.2.3",
     "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "glob": "^7.1.2",
     "html-webpack-plugin": "^2.30.1",
     "html-webpack-template": "^6.1.0",
     "nodemon": "^1.12.7",
+    "postcss-loader": "^2.0.9",
+    "purify-css": "^1.2.5",
+    "purifycss-webpack": "^0.7.0",
     "style-loader": "^0.19.1",
     "webpack": "^3.10.0",
     "webpack-dashboard": "^1.0.2",
     "webpack-dev-server": "^2.9.7",
     "webpack-merge": "^4.1.1"
+  },
+  "dependencies": {
+    "purecss": "^1.0.0"
   }
 }
